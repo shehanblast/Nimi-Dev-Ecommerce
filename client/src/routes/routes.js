@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 //Routes
 import CreateStore from "../Components/Employee/createStore"
+import EmpViewStore from "../Components/Views/empViewStore"
 
 function Routes() {
     return (
@@ -13,7 +14,7 @@ function Routes() {
                         <Route>
                             <Route path="/createStore" component={CreateStore} />
                             {/*<Route path="/viewStore" component={CustomerViewStore} />*/}
-                            {/*<Route path="/empViewStore" component={EmpViewStore} />*/}
+                            <Route path="/empViewStore" component={EmpViewStore} />
                             {/*<Route path="/editStore/:id" component={EditStore} />*/}
                             {/*<Route path="/storeItem/:id" component={StoreItem} />*/}
                             {/*<Route exact path="/homeStore" component={HomeScreen} />*/}
