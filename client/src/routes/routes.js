@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CreateStore from "../Components/Employee/createStore"
 import EmpViewStore from "../Components/Views/empViewStore"
 import EditStore from "../Components/Employee/editStore"
+import CustomerViewStore from "../Components/Views/customerViewStore"
 
 function Routes() {
     return (
@@ -14,7 +15,7 @@ function Routes() {
                     <Switch>
                         <Route>
                             <Route path="/createStore" component={CreateStore} />
-                            {/*<Route path="/viewStore" component={CustomerViewStore} />*/}
+                            <Route path="/viewStore" component={CustomerViewStore} />
                             <Route path="/empViewStore" component={EmpViewStore} />
                             <Route path="/editStore/:id" component={EditStore} />
                             {/*<Route path="/storeItem/:id" component={StoreItem} />*/}
