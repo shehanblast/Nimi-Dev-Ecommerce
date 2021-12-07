@@ -4,7 +4,7 @@ require('dotenv').config();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
-
+const storeAPI = require('./src/api/store.api');
 
 const app = express();
 app.use(cors());
@@ -33,7 +33,7 @@ mongoose.connect(MONGODB_URI, {
 });
 
 
-
+app.use('/store', storeAPI());
 
 
 mongoose.connection.once('open', () => {
