@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Add model">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Add controller" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +63,7 @@
       <updated>1638861105880</updated>
       <workItem from="1638861108808" duration="4017000" />
       <workItem from="1638868925835" duration="113000" />
-      <workItem from="1638869406091" duration="710000" />
+      <workItem from="1638869406091" duration="864000" />
     </task>
     <task id="LOCAL-00001" summary="Create Project structure">
       <created>1638862731576</created>
@@ -81,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638870004365</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add controller">
+      <created>1638870187460</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638870187460</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create Project structure" />
     <MESSAGE value="Add model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add model" />
+    <MESSAGE value="Add controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add controller" />
   </component>
 </project>
