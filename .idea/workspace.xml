@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Employee edit store done.">
+    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Customer View store done.">
+      <change afterPath="$PROJECT_DIR$/client/src/Actions/Authentication.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Actions/confirmEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Constants/Constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Users/login/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Users/login/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Users/notification/notification.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Users/notification/notification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Users/register/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Users/register/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Utils/validations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/authreducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/setToken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/UserAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/SendEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/UserController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/auth/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/auth/auth1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/Components/Views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/Users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -35,10 +61,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Components\Views" />
-      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Components\Employee" />
+      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Users" />
+      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src" />
+      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client" />
+      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\src" />
+      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\src\api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\src\controllers" />
-      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\src\models" />
     </key>
   </component>
   <component name="RunManager">
@@ -68,7 +98,7 @@
       <updated>1638861105880</updated>
       <workItem from="1638861108808" duration="4017000" />
       <workItem from="1638868925835" duration="113000" />
-      <workItem from="1638869406091" duration="6590000" />
+      <workItem from="1638869406091" duration="15856000" />
     </task>
     <task id="LOCAL-00001" summary="Create Project structure">
       <created>1638862731576</created>
@@ -119,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638875644738</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Customer View store done.">
+      <created>1638876088887</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1638876088887</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +182,7 @@
     <MESSAGE value="Add Employee Create Store." />
     <MESSAGE value="Employee view store done." />
     <MESSAGE value="Employee edit store done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Employee edit store done." />
+    <MESSAGE value="Customer View store done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer View store done." />
   </component>
 </project>

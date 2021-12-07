@@ -7,10 +7,17 @@ import EmpViewStore from "../Components/Views/empViewStore"
 import EditStore from "../Components/Employee/editStore"
 import CustomerViewStore from "../Components/Views/customerViewStore"
 
+
+import {Provider} from "react-redux";
+import store from "../Store";
+import Login from "../Users/login/login";
+import Register from "../Users/register/register";
+import ConfirmEmail from "../Actions/confirmEmail";
+
 function Routes() {
     return (
         <div>
-            {/*<Provider store={store}>*/}
+            <Provider store={store}>
                 <Router>
                     <Switch>
                         <Route>
@@ -22,10 +29,17 @@ function Routes() {
                             {/*<Route exact path="/homeStore" component={HomeScreen} />*/}
                             {/*<Route exact path="/product/:id" component={ProductScreen} />*/}
                             {/*<Route exact path="/cart" component={CartScreen} />*/}
+
+
+                            <Route path="/login" component={Login} />
+                            <Route path="/register" component={Register} />
+                            <Route path="/users/activate/:auth_token" component={ConfirmEmail}/>
+
+
                         </Route>
                     </Switch>
                 </Router>
-            {/*</Provider>*/}
+            </Provider>
         </div>
     );
 }

@@ -10,15 +10,19 @@
     "jspdf": "^2.4.0",
     "jspdf-autotable": "^3.5.23",
     "react": "^17.0.2",
-    "react-bootstrap": "^1.6.1",
+    "react-bootstrap": "^1.6.4",
     "react-dom": "^17.0.2",
     "react-file-base64": "^1.0.3",
     "react-notifications": "^1.7.2",
+    "react-redux": "^7.2.6",
     "react-redux-form": "^1.16.14",
     "react-router-dom": "^5.3.0",
     "react-scripts": "^4.0.3",
     "reactstrap": "^9.0.1",
-    "sweetalert2": "^11.3.0"
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+    "sweetalert2": "^11.3.0",
+    "zxcvbn": "^4.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
