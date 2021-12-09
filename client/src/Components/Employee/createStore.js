@@ -6,6 +6,7 @@ import './createStore.css'
 import FileBase from 'react-file-base64';
 import {Link} from "react-router-dom";
 import Footer from "../Common/footer/footer"
+import Header from "../Common/Header/header"
 
 
 
@@ -161,6 +162,7 @@ class CreateStore extends Component {
         const errors=this.validate(this.state.itemName,this.state.itemDescription);
         return (
             <>
+                <Header/>
             <div>
                 <Form className="store_wrapper" onSubmit={this.onSubmit}>
                     <h2 className="store_title">ADD STORE DETAILS</h2>

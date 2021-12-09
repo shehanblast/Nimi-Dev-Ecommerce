@@ -5,6 +5,7 @@ import FileBase from 'react-file-base64';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import './createStore.css'
 import Footer from "../Common/footer/footer"
+import Header from "../Common/Header/header"
 
 const initialState = {
 
@@ -107,6 +108,7 @@ class EditStore extends Component {
     render() {
         return (
             <>
+                <Header/>
             <div>
                 <Form className="store_wrapper" onSubmit={this.onSubmit}>
                     <h2 className="store_title">EDIT STORE DETAILS</h2>

@@ -43,12 +43,12 @@ const Login = ({loginUser, isLoggedIn}) => {
                 if (!localStorage.getItem('userPosition')) {
                     localStorage.setItem('userPosition', user.position);
                 }
-                return window.location.replace('/employee')
+                return window.location.replace('/empViewStore')
             case 'user':
                 if (!localStorage.getItem('userPosition')) {
                     localStorage.setItem('userPosition', user.position);
                 }
-                return window.location.replace('/user')
+                return window.location.replace('/viewStore')
             default:
         }
     }

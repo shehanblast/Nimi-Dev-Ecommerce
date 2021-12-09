@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import axios from 'axios';
 import swat from "sweetalert2";
 import Footer from "../Common/footer/footer"
+import Header from "../Common/Header/header"
 
 const SubmissionAlert1 = () => {
     swat.fire({
@@ -51,6 +52,7 @@ class CustomerViewStore extends Component {
     render() {
         return (
             <>
+                <Header/>
             <div className="aa">
                 <br/>
 

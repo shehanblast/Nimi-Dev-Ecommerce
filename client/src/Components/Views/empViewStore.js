@@ -8,6 +8,7 @@ import { ExportToCsv } from 'export-to-csv';
 // import * as jsPDF from "jspdf";
 import 'jspdf-autotable'
 import Footer from "../Common/footer/footer"
+import Header from "../Common/Header/header"
 
 const SubmissionAlert1 = () => {
     swat.fire({
@@ -109,7 +110,7 @@ class EmpViewStore extends Component {
     render() {
         return (
             <>
-
+                <Header/>
             <div>
                 <br/>
 
