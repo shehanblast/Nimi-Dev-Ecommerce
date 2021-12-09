@@ -29,8 +29,7 @@ function Routes() {
                             {/*<Route exact path="/homeStore" component={HomeScreen} />*/}
                             {/*<Route exact path="/product/:id" component={ProductScreen} />*/}
                             {/*<Route exact path="/cart" component={CartScreen} />*/}
-
-
+                            <Route path="/" component={CustomerViewStore} />
                             <Route path="/login" component={Login} />
                             <Route path="/register" component={Register} />
                             <Route path="/users/activate/:auth_token" component={ConfirmEmail}/>

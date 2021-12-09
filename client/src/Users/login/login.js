@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {isEmail, isEmpty, isLength} from "../../Utils/validations";
 import Footer from "../../Components/Common/footer/footer";
+import Header from "../../Components/Common/Header/header"
 
 const Login = ({loginUser, isLoggedIn}) => {
 
@@ -84,6 +85,7 @@ const Login = ({loginUser, isLoggedIn}) => {
     }
     return (
         <>
+            <Header/>
         <div className="Login">
             <Form onSubmit={(event) => submitData(event)}>
                 <h3 className="login_title">LOGIN</h3>

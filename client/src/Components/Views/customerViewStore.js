@@ -58,7 +58,7 @@ class CustomerViewStore extends Component {
 
                 <div className="container">
 
-                    <div className="alert alert-primary" role="alert">
+                    <div className="alert btn-dark" role="alert">
                         <h2>Store</h2>
                     </div>
 

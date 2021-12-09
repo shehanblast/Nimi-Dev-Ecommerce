@@ -7,6 +7,7 @@ import './register.css'
 import zxcvbn from "zxcvbn";
 import {isLengthMobile, isMobile} from "../../Utils/validations";
 import Footer from "../../Components/Common/footer/footer";
+import Header from "../../Components/Common/Header/header"
 
 const RegisteredAlert = () => {
     swat.fire({
@@ -184,6 +185,7 @@ class Register extends Component {
         const testedResult = zxcvbn(this.state.password);
         return (
             <>
+                <Header/>
             <div>
                 <br/><br/>
                 <Form className="register_wrapper" onSubmit={this.onSubmit}>

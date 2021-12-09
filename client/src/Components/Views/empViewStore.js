@@ -88,7 +88,7 @@ class EmpViewStore extends Component {
         doc.setFontSize(25);
 
 
-        const title = "EQUINOX Gym All Store Items Details Report";
+        const title = "Nimi-dev Ecommerce Store Items Details Report";
         const headers = [['Item Name','Description','Amount', 'QTY']];
 
         const data = this.state.store.map(elt=> [elt.itemName, elt.itemDescription,elt.itemAmount, elt.itemQTY]);
@@ -115,7 +115,7 @@ class EmpViewStore extends Component {
                 <br/>
 
                 <div className="container emp">
-                    <div className="alert alert-primary" role="alert">
+                    <div className="alert btn-dark" role="alert">
                         <h2>Store Details</h2>
                     </div>
                     <table className="table table-hover">
