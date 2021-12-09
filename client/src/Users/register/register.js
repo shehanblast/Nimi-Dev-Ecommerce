@@ -6,6 +6,7 @@ import {SERVER_ADDRESS} from "../../Constants/Constants";
 import './register.css'
 import zxcvbn from "zxcvbn";
 import {isLengthMobile, isMobile} from "../../Utils/validations";
+import Footer from "../../Components/Common/footer/footer";
 
 const RegisteredAlert = () => {
     swat.fire({
@@ -182,6 +183,7 @@ class Register extends Component {
             ,this.state.lastname,this.state.password,this.state.DOB,this.state.Gender);
         const testedResult = zxcvbn(this.state.password);
         return (
+            <>
             <div>
                 <br/><br/>
                 <Form className="register_wrapper" onSubmit={this.onSubmit}>
@@ -358,6 +360,8 @@ class Register extends Component {
                 </Form>
 
             </div>
+                <Footer/>
+            </>
         );
     }
 }

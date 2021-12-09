@@ -7,7 +7,7 @@ import {DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "
 import { ExportToCsv } from 'export-to-csv';
 // import * as jsPDF from "jspdf";
 import 'jspdf-autotable'
-
+import Footer from "../Common/footer/footer"
 
 const SubmissionAlert1 = () => {
     swat.fire({
@@ -108,6 +108,8 @@ class EmpViewStore extends Component {
 
     render() {
         return (
+            <>
+
             <div>
                 <br/>
 
@@ -174,6 +176,9 @@ class EmpViewStore extends Component {
                 </div>
 
             </div>
+
+                <Footer/>
+            </>
         )
     }
 }

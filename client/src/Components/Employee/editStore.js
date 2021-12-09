@@ -4,10 +4,7 @@ import swat from "sweetalert2"
 import FileBase from 'react-file-base64';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import './createStore.css'
-// import {Link} from "react-router-dom";
-// import UserNavbar from "../navbar/UserNavBar";
-// import {isEmpty} from "../../utils/validation";
-// import Select from 'react-select';
+import Footer from "../Common/footer/footer"
 
 const initialState = {
 
@@ -109,6 +106,7 @@ class EditStore extends Component {
 
     render() {
         return (
+            <>
             <div>
                 <Form className="store_wrapper" onSubmit={this.onSubmit}>
                     <h2 className="store_title">EDIT STORE DETAILS</h2>
@@ -171,6 +169,8 @@ class EditStore extends Component {
                     <i className="fas fa-store"></i>  Items Page</button>
 
             </div>
+                <Footer/>
+            </>
         );
 
         // return (

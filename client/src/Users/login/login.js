@@ -6,6 +6,7 @@ import './login.css'
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {isEmail, isEmpty, isLength} from "../../Utils/validations";
+import Footer from "../../Components/Common/footer/footer";
 
 const Login = ({loginUser, isLoggedIn}) => {
 
@@ -82,18 +83,9 @@ const Login = ({loginUser, isLoggedIn}) => {
         }
     }
     return (
+        <>
         <div className="Login">
             <Form onSubmit={(event) => submitData(event)}>
-                {/*<div className="login_img">*/}
-                {/*    <img*/}
-                {/*        alt=""*/}
-                {/*        src={logo}*/}
-                {/*        width="250"*/}
-                {/*        height="100"*/}
-                {/*        align="center"*/}
-                {/*    />*/}
-                {/*</div>*/}
-                &nbsp;
                 <h3 className="login_title">LOGIN</h3>
                 <Form.Group size="lg" controlId="email" >
                     <Form.Label>Email</Form.Label>
@@ -119,9 +111,7 @@ const Login = ({loginUser, isLoggedIn}) => {
                         name="password"
                         required/>
                 </Form.Group>
-                <Form.Group className="login_forgot">
-                    <Form.Label>Forgot<a  href="/forgot"> Password?</a></Form.Label>
-                </Form.Group>
+               <br/>
                 <button type="submit" className="login_button btn btn-primary">
                     LOGIN
                 </button>
@@ -131,6 +121,8 @@ const Login = ({loginUser, isLoggedIn}) => {
                 </Form.Group>
             </Form>
         </div>
+        <Footer/>
+    </>
     );
 }
 const mapStateToProps = state => ({

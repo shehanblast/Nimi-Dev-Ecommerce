@@ -5,8 +5,7 @@ import {Form, FormGroup, Label, Input, FormFeedback} from 'reactstrap';
 import './createStore.css'
 import FileBase from 'react-file-base64';
 import {Link} from "react-router-dom";
-// import UserNavbar from "../navbar/UserNavBar";
-// import Template1 from "url:../../Assets/Templates/temp2.docx";
+import Footer from "../Common/footer/footer"
 
 
 
@@ -161,6 +160,7 @@ class CreateStore extends Component {
     render() {
         const errors=this.validate(this.state.itemName,this.state.itemDescription);
         return (
+            <>
             <div>
                 <Form className="store_wrapper" onSubmit={this.onSubmit}>
                     <h2 className="store_title">ADD STORE DETAILS</h2>
@@ -242,6 +242,8 @@ class CreateStore extends Component {
                 <button className="store_button2 btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore()}>
                     <i className="fas fa-store"></i>  Items Page</button>
             </div>
+        <Footer/>
+    </>
         );
 
         // return (
