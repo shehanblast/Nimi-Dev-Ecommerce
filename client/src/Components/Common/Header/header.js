@@ -16,6 +16,7 @@ import Avatar from 'react-avatar';
 import {Button} from "react-bootstrap";
 
 class Header extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -46,48 +47,8 @@ class Header extends Component {
 
         window.location.replace('/login')
     }
-    profileLink = e => {
-        window.location.replace('/profile');
-    }
-    AddUser = e => {
-        window.location.replace('/adminReg');
-    }
-    ViewUsers = e => {
-        window.location.replace('/getAll');
-    }
-    AddStock = e => {
-        window.location.replace('/adminCreateStockCategory');
-    }
-    ViewStock = e => {
-        window.location.replace('/adminViewStockCategory');
-    }
-    AddSupplier = e => {
-        window.location.replace('/adminCreateSuppliers');
-    }
-    ViewSupplier = e => {
-        window.location.replace('/adminViewSuppliers');
-    }
-    // AddCategory = e => {
-    //     window.location.replace('#');
-    // }
-    // ViewCategory = e => {
-    //     window.location.replace('#');
-    // }
-    AddCWorkout = e => {
-        window.location.replace('/workout');
-    }
-    ViewWorkout = e => {
-        window.location.replace('/workoutEmployeeShow');
-    }
-    BuyWorkout = e => {
-        window.location.replace('/question');
-    }
-    ViewWorkoutUser = e => {
-        window.location.replace('/workoutUserShow/'+this.state.id);
-    }
-    ViewAllWorkoutUser= e => {
-        window.location.replace('/workoutUserAllShow');
-    }
+
+
 
     componentDidMount() {
         const token = localStorage.getItem('token');
@@ -148,70 +109,6 @@ class Header extends Component {
                             :
                             null
                         }
-                        {localStorage.getItem('userPosition')=== "admin" ?
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page"
-                                       href="/admin">Home</a>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <UncontrolledDropdown nav>
-                                        <DropdownToggle nav caret>
-                                            Stock
-                                        </DropdownToggle>
-                                        <DropdownMenu>
-                                            <DropdownItem onClick={this.AddStock}>
-                                                Add Stock
-                                            </DropdownItem>
-                                            <DropdownItem divider/>
-                                            <DropdownItem onClick={this.ViewStock}>
-                                                View Stock
-                                            </DropdownItem>
-                                        </DropdownMenu>
-                                    </UncontrolledDropdown>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <UncontrolledDropdown nav>
-                                        <DropdownToggle nav caret>
-                                            Users
-                                        </DropdownToggle>
-                                        <DropdownMenu>
-                                            <DropdownItem onClick={this.AddUser}>
-                                                Add User
-                                            </DropdownItem>
-                                            <DropdownItem divider/>
-                                            <DropdownItem onClick={this.ViewUsers}>
-                                                View Users Details
-                                            </DropdownItem>
-                                        </DropdownMenu>
-                                    </UncontrolledDropdown>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <UncontrolledDropdown nav>
-                                        <DropdownToggle nav caret>
-                                            Supplier
-                                        </DropdownToggle>
-                                        <DropdownMenu>
-                                            <DropdownItem onClick={this.AddSupplier}>
-                                                Add Supplier
-                                            </DropdownItem>
-                                            <DropdownItem divider/>
-                                            <DropdownItem onClick={this.ViewSupplier}>
-                                                View Suppliers
-                                            </DropdownItem>
-                                        </DropdownMenu>
-                                    </UncontrolledDropdown>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/createStore">Add Store</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/workoutAdminShow">View Workout</a>
-                                </li>
-                            </ul>
-                            :
-                            null
-                        }
                         {localStorage.getItem('userPosition') === "employee" ?
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
@@ -239,7 +136,7 @@ class Header extends Component {
                             null
                         }
                     </Nav>
-                    {localStorage.getItem('userPosition') === "admin" || localStorage.getItem('userPosition') === "employee" ||
+                    {localStorage.getItem('userPosition') === "employee" ||
                     localStorage.getItem('userPosition') === "user" ?
                         <Nav className="ml-auto">
                             <UncontrolledDropdown nav>
@@ -259,7 +156,7 @@ class Header extends Component {
                         :
                         null
                     }
-                    { localStorage.getItem('userPosition') !== "admin" &&
+                    {
                     localStorage.getItem('userPosition') !== "employee" &&
                     localStorage.getItem('userPosition') !== "user" ||
                     localStorage.getItem('userPosition') === " " ?

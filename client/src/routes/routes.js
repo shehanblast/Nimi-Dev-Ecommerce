@@ -7,13 +7,14 @@ import EmpViewStore from "../Components/Views/empViewStore"
 import EditStore from "../Components/Employee/editStore"
 import CustomerViewStore from "../Components/Views/customerViewStore"
 
-
+//User
 import {Provider} from "react-redux";
 import store from "../Store";
 import Login from "../Users/login/login";
 import Register from "../Users/register/register";
 import ConfirmEmail from "../Actions/confirmEmail";
 
+//Screens
 import CartPayment from "../Components/Views/Cart/cartPayment";
 import HomeScreen from "../Components/Views/screens/HomeScreen";
 import ProductScreen from "../Components/Views/screens/ProductScreen";
@@ -39,10 +40,6 @@ function Routes() {
                             <Route path="/login" component={Login} />
                             <Route path="/register" component={Register} />
                             <Route path="/users/activate/:auth_token" component={ConfirmEmail}/>
-
-
-
-
 
                         </Route>
                     </Switch>

@@ -98,8 +98,6 @@ class CartPayment extends Component {
         console.log(this.state.tot);
     }
 
-    //check
-
     navigateStore() {
         window.location = `/empViewStore`
     }
@@ -108,7 +106,6 @@ class CartPayment extends Component {
     onChange(e) {
         this.setState({[e.target.name]: e.target.value})
     }
-
 
 
     onSubmit(e) {
@@ -128,109 +125,106 @@ class CartPayment extends Component {
         const errors=this.validate(this.state.Email,this.state.cd,this.state.EXP,this.state.sc);
         return (
             <>
-            <Header/>
+                <Header/>
+                    <div>
+                        <Form className="store_wrapper" onSubmit={this.onSubmit}>
+                            <h2 className="store_title">Payment Details</h2>
+                            <FormGroup>
+                                <Label htmlFor="Email" className="form-label">Email</Label>
+                                <div>
+                                    <Input
+                                        type="text"
+                                        className="form-control"
+                                        id="Email"
+                                        name="Email"
+                                        placeholder="Email"
+                                        value={this.state.Email}
+                                        onChange={this.onChange}
+                                        valid={errors.Email === ''}
+                                        invalid={errors.Email !== ''}
+                                        onBlur={this.handleBlur('Email')}
+                                    />
+                                    <FormFeedback>{errors.Email}</FormFeedback>
+                                </div>
+                            </FormGroup>
+                            <FormGroup>
+                                <label htmlFor="Amount" className="form-label">Amount</label>
+                                <div>
+                                    <Input
+                                        type="number"
+                                        className="form-control"
+                                        id="Amount"
+                                        name="Amount"
+                                        value={this.state.tot}
+                                    />
+                                </div>
+                            </FormGroup>
+                            <Form className="store_wrapper">
 
-            <div>
-                <Form className="store_wrapper" onSubmit={this.onSubmit}>
-                    <h2 className="store_title">Payment Details</h2>
-                    <FormGroup>
-                        <Label htmlFor="Email" className="form-label">Email</Label>
-                        <div>
-                            <Input
-                                type="text"
-                                className="form-control"
-                                id="Email"
-                                name="Email"
-                                placeholder="Email"
-                                value={this.state.Email}
-                                onChange={this.onChange}
-                                valid={errors.Email === ''}
-                                invalid={errors.Email !== ''}
-                                onBlur={this.handleBlur('Email')}
-                            />
-                            <FormFeedback>{errors.Email}</FormFeedback>
-                        </div>
-                    </FormGroup>
-                    <FormGroup>
-                        <label htmlFor="Amount" className="form-label">Amount</label>
-                        <div>
-                            <Input
-                                type="number"
-                                className="form-control"
-                                id="Amount"
-                                name="Amount"
-                                value={this.state.tot}
-                            />
-                        </div>
-                    </FormGroup>
-                    <Form className="store_wrapper">
+                                <FormGroup>
+                                    <label htmlFor="cd" className="form-label">Credit Card</label>
+                                    <div>
+                                        <Input
+                                            type="number"
+                                            className="form-control"
+                                            id="cd"
+                                            name="cd"
+                                            placeholder="Credit Card"
+                                            pattern="[0-9]*"
+                                            inputmode="numeric"
+                                            value={this.state.cd}
+                                            onChange={this.onChange}
+                                            valid={errors.cd === ''}
+                                            invalid={errors.cd !== ''}
+                                            onBlur={this.handleBlur('cd')}
+                                        />
+                                        <FormFeedback>{errors.cd}</FormFeedback>
+                                    </div>
+                                </FormGroup>
+                                <FormGroup>
+                                    <input
+                                        type="date"
+                                        className="form-control"
+                                        id="EXP"
+                                        name="EXP"
+                                        placeholder="20"
+                                        value={this.state.EXP}
+                                        onChange={this.onChange}
+                                        valid={errors.EXP === ''}
+                                        invalid={errors.EXP !== ''}
+                                        onBlur={this.handleBlur('EXP')}
+                                    />
+                                    <FormFeedback>{errors.EXP}</FormFeedback>
+                                </FormGroup>
+                                <FormGroup>
+                                    <div>
+                                        <Input
+                                            type="number"
+                                            className="form-control"
+                                            id="sc"
+                                            name="sc"
+                                            placeholder="Security Code"
+                                            pattern="[0-9]*"
+                                            inputmode="numeric"
+                                            value={this.state.sc}
+                                            onChange={this.onChange}
+                                            valid={errors.sc === ''}
+                                            invalid={errors.sc !== ''}
+                                            onBlur={this.handleBlur('sc')}
+                                        />
+                                        <FormFeedback>{errors.sc}</FormFeedback>
+                                    </div>
+                                </FormGroup>
 
-                        <FormGroup>
-                            <label htmlFor="cd" className="form-label">Credit Card</label>
-                            <div>
-                                <Input
-                                    type="number"
-                                    className="form-control"
-                                    id="cd"
-                                    name="cd"
-                                    placeholder="Credit Card"
-                                    pattern="[0-9]*"
-                                    inputmode="numeric"
-                                    value={this.state.cd}
-                                    onChange={this.onChange}
-                                    valid={errors.cd === ''}
-                                    invalid={errors.cd !== ''}
-                                    onBlur={this.handleBlur('cd')}
-                                />
-                                <FormFeedback>{errors.cd}</FormFeedback>
-                            </div>
-                        </FormGroup>
-                        <FormGroup>
-                            <input
-                                type="date"
-                                className="form-control"
-                                id="EXP"
-                                name="EXP"
-                                placeholder="20"
-                                value={this.state.EXP}
-                                onChange={this.onChange}
-                                valid={errors.EXP === ''}
-                                invalid={errors.EXP !== ''}
-                                onBlur={this.handleBlur('EXP')}
-                            />
-                            <FormFeedback>{errors.EXP}</FormFeedback>
-                        </FormGroup>
-                        <FormGroup>
-                            <div>
-                                <Input
-                                    type="number"
-                                    className="form-control"
-                                    id="sc"
-                                    name="sc"
-                                    placeholder="Security Code"
-                                    pattern="[0-9]*"
-                                    inputmode="numeric"
-                                    value={this.state.sc}
-                                    onChange={this.onChange}
-                                    valid={errors.sc === ''}
-                                    invalid={errors.sc !== ''}
-                                    onBlur={this.handleBlur('sc')}
-                                />
-                                <FormFeedback>{errors.sc}</FormFeedback>
-                            </div>
-                        </FormGroup>
+                            </Form>
+                            <button type="submit"  className="store_button btn btn-primary">Pay</button>
 
-                    </Form>
-                    <button type="submit"  className="store_button btn btn-primary">Pay</button>
+                        </Form>
 
-                </Form>
-
-            </div>
+                    </div>
                 <Footer/>
             </>
         );
-
-
     }
 }
 export default CartPayment;

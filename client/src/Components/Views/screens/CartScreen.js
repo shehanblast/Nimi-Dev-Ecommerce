@@ -53,52 +53,47 @@ const CartScreen = () => {
   console.log("Total is : "+ tot);
 
   return (
-      <>
-        <Header/>
-      <div className="container">
-        <br/>
-        <CartHeader/>
-
-        <>
-      <div className="cartscreen">
-        <div className="cartscreen__left">
-          <h2>Shopping Cart</h2>
-          <hr/>
-
-            {cartItems.length === 0 ? (
-              <div>
-                Your Cart Is Empty <Link to="/">Go Back</Link>
+          <>
+            <Header/>
+              <div className="container">
+                <br/>
+                <CartHeader/>
+                  <>
+                    <div className="cartscreen">
+                      <div className="cartscreen__left">
+                        <h2>Shopping Cart</h2>
+                        <hr/>
+                          {cartItems.length === 0 ? (
+                            <div>
+                              Your Cart Is Empty <Link to="/">Go Back</Link>
+                            </div>
+                          ) : (
+                            cartItems.map((item) => (
+                              <CartItem
+                                key={item.product}
+                                item={item}
+                                qtyChangeHandler={qtyChangeHandler}
+                                removeHandler={removeFromCartHandler}
+                              />
+                            ))
+                          )}
+                      </div>
+                      <div className="cartscreen__right">
+                        <div className="cartscreen__info">
+                          <p>Subtotal ({getCartCount()}) items</p>
+                          <hr/>
+                          <p>Total Count :- {getCartCount()} Items </p>
+                          <p>Total Price :- LKR:{getCartSubTotal()}</p>
+                        </div>
+                        <div>
+                          <button onClick={e => navigatePayment(e,tot)}>Proceed To Checkout</button>
+                        </div>
+                      </div>
+                    </div>
+                </>
               </div>
-            ) : (
-              cartItems.map((item) => (
-                <CartItem
-                  key={item.product}
-                  item={item}
-                  qtyChangeHandler={qtyChangeHandler}
-                  removeHandler={removeFromCartHandler}
-                />
-              ))
-            )}
-
-        </div>
-
-        <div className="cartscreen__right">
-          <div className="cartscreen__info">
-            <p>Subtotal ({getCartCount()}) items</p>
-            <hr/>
-            <p>Total Count :- {getCartCount()} Items </p>
-            <p>Total Price :- LKR:{getCartSubTotal()}</p>
-          </div>
-          <div>
-            <button onClick={e => navigatePayment(e,tot)}>Proceed To Checkout</button>
-          </div>
-        </div>
-      </div>
-    </>
-      </div>
-
-<Footer/>
-      </>
+            <Footer/>
+          </>
 
   );
 };

@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Product details screen/Cart/Payment done.">
+    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Code Refactoring 1.0">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Common/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Common/Header/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Common/footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Common/footer/footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Employee/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Employee/createStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Employee/editStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Employee/editStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Views/Cart/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/Cart/CartItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Views/Cart/cartPayment.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/Cart/cartPayment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Views/Product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/Product/Product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Views/customerViewStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/customerViewStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Views/empViewStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/empViewStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Views/screens/CartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/screens/CartScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Views/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/screens/HomeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Views/screens/ProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/screens/ProductScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Users/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Users/login/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Users/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Users/register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +87,7 @@
       <updated>1638861105880</updated>
       <workItem from="1638861108808" duration="4017000" />
       <workItem from="1638868925835" duration="113000" />
-      <workItem from="1638869406091" duration="33277000" />
+      <workItem from="1638869406091" duration="36477000" />
     </task>
     <task id="LOCAL-00001" summary="Create Project structure">
       <created>1638862731576</created>
@@ -189,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639118999441</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Code Refactoring 1.0">
+      <created>1639120095005</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1639120095005</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +235,7 @@
     <MESSAGE value="Add reducers/actions for cart" />
     <MESSAGE value="Category Product Search function done." />
     <MESSAGE value="Product details screen/Cart/Payment done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Product details screen/Cart/Payment done." />
+    <MESSAGE value="Code Refactoring 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Refactoring 1.0" />
   </component>
 </project>

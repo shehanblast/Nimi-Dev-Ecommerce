@@ -89,14 +89,6 @@ class CreateStore extends Component {
         return errors;
     }
 
-    componentDidMount() {
-        // console.log(this.props.match.params.id);
-        // this.state.paper_author = "62534524444444";
-        // this.state.paper_event = this.props.match.params.id;
-    }
-
-    //check
-
     navigateStore() {
         window.location = `/empViewStore`
     }
@@ -117,25 +109,6 @@ class CreateStore extends Component {
             itemImage: this.state.itemImage
         }
 
-        // console.log('DATA TO SEND', store);
-        // axios.post('http://localhost:5000/store', store)
-        //     .then(response => {
-        //         SubmissionAlert()
-        //
-        //     })
-        //     .catch(error => {
-        //         console.log(error.message);
-        //         let message = "Submission Error"
-        //         SubmissionFail(message);
-        //     })
-        // this.setState({ isDisabled: false });
-
-        // if (isEmpty(this.state.itemName) || isEmpty(this.state.itemDescription) || isEmpty(this.state.itemAmount) || isEmpty(this.state.itemQTY))
-        // {
-        //     let message = "Fill the required fields"
-        //     SubmissionFail(message);
-        // }
-        // else{
         if (this.state.itemName.length < 3 || this.state.itemName.length > 10 ||
             this.state.itemDescription.length < 5) {
             this.validate(this.state.itemName,this.state.itemDescription)
@@ -166,157 +139,89 @@ class CreateStore extends Component {
         return (
             <>
                 <Header/>
-            <div>
-                <Form className="store_wrapper" onSubmit={this.onSubmit}>
-                    <h2 className="store_title">ADD STORE DETAILS</h2>
-                    <FormGroup>
-                        <Label htmlFor="storeName" className="form-label">Name</Label>
-                        <div>
-                            <Input
-                                type="text"
-                                className="form-control"
-                                id="storeName"
-                                name="itemName"
-                                placeholder="Name"
-                                value={this.state.itemName}
-                                onChange={this.onChange}
-                                valid={errors.itemName === ''}
-                                invalid={errors.itemName !== ''}
-                                onBlur={this.handleBlur('itemName')}
-                            />
-                            <FormFeedback>{errors.itemName}</FormFeedback>
-                        </div>
-                    </FormGroup>
-                    <FormGroup>
-                        <label htmlFor="storeDes" className="form-label">Description</label>
-                        <div>
-                            <Input
-                                type="text"
-                                className="form-control"
-                                id="storeDes"
-                                name="itemDescription"
-                                placeholder="Description"
-                                value={this.state.itemDescription}
-                                onChange={this.onChange}
-                                valid={errors.itemDescription === ''}
-                                invalid={errors.itemDescription !== ''}
-                                onBlur={this.handleBlur('itemDescription')}
-                            />
-                            <FormFeedback>{errors.itemDescription}</FormFeedback>
-                        </div>
-                    </FormGroup>
-                    <FormGroup>
-                        <label htmlFor="storeAmount" className="form-label">Amount</label>
-                        <div>
-                            <Input
-                                type="number"
-                                className="form-control"
-                                id="storeAmount"
-                                name="itemAmount"
-                                placeholder="2000.00"
-                                pattern="[0-9]*"
-                                inputmode="numeric"
-                                value={this.state.itemAmount}
-                                onChange={this.onChange}
-                            />
-                            <FormFeedback>{errors.itemAmount}</FormFeedback>
-                        </div>
-                    </FormGroup>
-                    <FormGroup>
-                        <label htmlFor="storeQTY" className="form-label">QTY</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="storeQTY"
-                            name="itemQTY"
-                            placeholder="20"
-                            value={this.state.itemQTY}
-                            onChange={this.onChange}
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="storeImage">Image</Label>
-                        <br/>
-                        <FileBase type="file" multiple={false} onDone={({base64}) => this.state.itemImage = base64} />
-                    </FormGroup>
-                    &nbsp;
-                    {/*<button className="register_button btn btn-primary">REGISTER</button>*/}
-                    <button type="submit" className="store_button btn btn-primary">Add Item</button>
-                    {/*<button className="store_button btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore()}>Items Page</button>*/}
-                </Form>
-                <button className="store_button2 btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore()}>
-                    <i className="fas fa-store"></i>  Items Page</button>
-            </div>
-        <Footer/>
-    </>
+                    <div>
+                        <Form className="store_wrapper" onSubmit={this.onSubmit}>
+                            <h2 className="store_title">ADD STORE DETAILS</h2>
+                            <FormGroup>
+                                <Label htmlFor="storeName" className="form-label">Name</Label>
+                                <div>
+                                    <Input
+                                        type="text"
+                                        className="form-control"
+                                        id="storeName"
+                                        name="itemName"
+                                        placeholder="Name"
+                                        value={this.state.itemName}
+                                        onChange={this.onChange}
+                                        valid={errors.itemName === ''}
+                                        invalid={errors.itemName !== ''}
+                                        onBlur={this.handleBlur('itemName')}
+                                    />
+                                    <FormFeedback>{errors.itemName}</FormFeedback>
+                                </div>
+                            </FormGroup>
+                            <FormGroup>
+                                <label htmlFor="storeDes" className="form-label">Description</label>
+                                <div>
+                                    <Input
+                                        type="text"
+                                        className="form-control"
+                                        id="storeDes"
+                                        name="itemDescription"
+                                        placeholder="Description"
+                                        value={this.state.itemDescription}
+                                        onChange={this.onChange}
+                                        valid={errors.itemDescription === ''}
+                                        invalid={errors.itemDescription !== ''}
+                                        onBlur={this.handleBlur('itemDescription')}
+                                    />
+                                    <FormFeedback>{errors.itemDescription}</FormFeedback>
+                                </div>
+                            </FormGroup>
+                            <FormGroup>
+                                <label htmlFor="storeAmount" className="form-label">Amount</label>
+                                <div>
+                                    <Input
+                                        type="number"
+                                        className="form-control"
+                                        id="storeAmount"
+                                        name="itemAmount"
+                                        placeholder="2000.00"
+                                        pattern="[0-9]*"
+                                        inputmode="numeric"
+                                        value={this.state.itemAmount}
+                                        onChange={this.onChange}
+                                    />
+                                    <FormFeedback>{errors.itemAmount}</FormFeedback>
+                                </div>
+                            </FormGroup>
+                            <FormGroup>
+                                <label htmlFor="storeQTY" className="form-label">QTY</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="storeQTY"
+                                    name="itemQTY"
+                                    placeholder="20"
+                                    value={this.state.itemQTY}
+                                    onChange={this.onChange}
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="storeImage">Image</Label>
+                                <br/>
+                                <FileBase type="file" multiple={false} onDone={({base64}) => this.state.itemImage = base64} />
+                            </FormGroup>
+                            &nbsp;
+                            <button type="submit" className="store_button btn btn-primary">Add Item</button>
+                        </Form>
+                        <button className="store_button2 btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore()}>
+                            <i className="fas fa-store"></i>  Items Page</button>
+                    </div>
+                <Footer/>
+            </>
         );
 
-        // return (
-        //
-        //     <div>
-        //         <div className="container">
-        //             <h1>Create Paper</h1>
-        //
-        //             <form onSubmit={this.onSubmit}>
-        //
-        //                 <div className="mb-3">
-        //                     <label htmlFor="storeName" className="form-label">Name</label>
-        //                     <input
-        //                         type="text"
-        //                         className="form-control"
-        //                         id="storeName"
-        //                         name="itemName"
-        //                         value={this.state.itemName}
-        //                         onChange={this.onChange}
-        //                     />
-        //                 </div>
-        //                 <div className="mb-3">
-        //                     <label htmlFor="storeDes" className="form-label">Description</label>
-        //                     <input
-        //                         type="text"
-        //                         className="form-control"
-        //                         id="storeDes"
-        //                         name="itemDescription"
-        //                         value={this.state.itemDescription}
-        //                         onChange={this.onChange}
-        //                     />
-        //                 </div>
-        //                 <div className="mb-3">
-        //                     <label htmlFor="storeAmount" className="form-label">Amount</label>
-        //                     <input
-        //                         type="number"
-        //                         className="form-control"
-        //                         id="storeAmount"
-        //                         name="itemAmount"
-        //                         value={this.state.itemAmount}
-        //                         onChange={this.onChange}
-        //                     />
-        //                 </div>
-        //                 <div className="mb-3">
-        //                     <label htmlFor="storeQTY" className="form-label">QTY</label>
-        //                     <input
-        //                         type="number"
-        //                         className="form-control"
-        //                         id="storeQTY"
-        //                         name="itemQTY"
-        //                         value={this.state.itemQTY}
-        //                         onChange={this.onChange}
-        //                     />
-        //                 </div>
-        //                 <div className="mb-3">
-        //                     <label htmlFor="itemImage" className="form-label">Picture</label>
-        //                     <div>
-        //                         <FileBase type="file" multiple={false} onDone={({base64}) => this.state.itemImage = base64} />
-        //                     </div>
-        //                 </div>
-        //
-        //                 <button type="submit" className="btn btn-primary">Add Item</button><br/>
-        //                 <button className="btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore(e)}>Items Page</button>
-        //             </form>
-        //         </div>
-        //         <br/>
-        //     </div>
-        // )
     }
 }
 export default CreateStore;

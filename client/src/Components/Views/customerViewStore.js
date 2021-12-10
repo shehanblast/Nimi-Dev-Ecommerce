@@ -69,45 +69,39 @@ class CustomerViewStore extends Component {
         return (
             <>
                 <Header/>
-            <div className="aa">
-                <br/>
+                    <div className="aa">
+                        <br/>
+                        <div className="container">
 
-                <div className="container">
-
-                    <div className="alert btn-dark" role="alert">
-                        <h2>Store</h2>
-                    </div>
-
-                    <form className="form-inline">
-                        <input className="form-control mr-sm-2 mr-md-2 " type="search" placeholder="Enter Category" aria-label="Search" value={filter} onChange={this.handleChange}/>
-                    </form>
-
-                    <div className="row">
-                        {this.state.store.length > 0 && this.state.filteredData.map((item, index) => (
-                            <div className="col-md-3">
-
-                                <div className="card">
-                                    <img className="w3-card-4 card-img-top" src={item.itemImage}  alt="Card image cap"/>
-                                    <div className="card-body">
-                                        <h5 className="card-title">{item.itemName}</h5>
-                                        <h6 className="card-text">{item.itemDescription}</h6>
-                                        <hr/>
-                                        <h6 className="card-text">LKR : {item.itemAmount}</h6>
-                                        <hr/>
-                                        <button className="btn btn-primary" onClick={e => this.navigateStoreItem(e,item._id)}>Add</button>
-                                    </div>
-                                </div>
-
+                            <div className="alert btn-dark" role="alert">
+                                <h2>Store</h2>
                             </div>
-                        ))}
+
+                            <form className="form-inline">
+                                <input className="form-control mr-sm-2 mr-md-2 " type="search" placeholder="Enter Category" aria-label="Search" value={filter} onChange={this.handleChange}/>
+                            </form>
+
+                            <div className="row">
+                                {this.state.store.length > 0 && this.state.filteredData.map((item, index) => (
+                                    <div className="col-md-3">
+                                        <div className="card">
+                                            <img className="w3-card-4 card-img-top" src={item.itemImage}  alt="Card image cap"/>
+                                            <div className="card-body">
+                                                <h5 className="card-title">{item.itemName}</h5>
+                                                <h6 className="card-text">{item.itemDescription}</h6>
+                                                <hr/>
+                                                <h6 className="card-text">LKR : {item.itemAmount}</h6>
+                                                <hr/>
+                                                <button className="btn btn-primary" onClick={e => this.navigateStoreItem(e,item._id)}>Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
-
-
-                </div>
-            </div>
-
-        <Footer/>
-    </>
+                <Footer/>
+            </>
         )
     }
 }

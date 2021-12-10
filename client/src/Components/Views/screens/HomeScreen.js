@@ -26,50 +26,35 @@ const HomeScreen = () => {
     }, [dispatch]);
 
     return (
-<>
-    <Header2/>
-    <div className="aa">
-        <br/>
-
-        <div className="container">
-
-            <CartHeader/>
-
-            <br/>
-
-            <div className="row">
-
-
-                         {loading ? (
-                            <h2>Loading...</h2>
-                        ) : error ? (
-                            <h2>{error}</h2>
-                        ) : (
-                            products.map((product) => (
-                                <Product
-                                    key={product._id}
-                                    name={product.itemName}
-                                    description={product.itemDescription}
-                                    price={product.itemAmount}
-                                    imageUrl={product.itemImage}
-                                    productId={product._id}
-                                />
-                            ))
-                        )}
-
-
-
-
-
-
-
-            </div>
-
-
-        </div>
-    </div>
-    <Footer/>
-</>
+            <>
+                <Header2/>
+                    <div className="aa">
+                        <br/>
+                        <div className="container">
+                            <CartHeader/>
+                            <br/>
+                            <div className="row">
+                                 {loading ? (
+                                    <h2>Loading...</h2>
+                                ) : error ? (
+                                    <h2>{error}</h2>
+                                ) : (
+                                    products.map((product) => (
+                                        <Product
+                                            key={product._id}
+                                            name={product.itemName}
+                                            description={product.itemDescription}
+                                            price={product.itemAmount}
+                                            imageUrl={product.itemImage}
+                                            productId={product._id}
+                                        />
+                                    ))
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                <Footer/>
+            </>
     );
 };
 

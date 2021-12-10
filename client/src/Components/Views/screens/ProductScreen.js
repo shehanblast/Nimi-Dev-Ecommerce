@@ -32,82 +32,69 @@ const ProductScreen = ({ match, history }) => {
   };
 
   return (
-      <>
-        <Header/>
-      <div className="container">
-        <br/>
-
-
-    <div className="productsceen">
-      {loading ? (
-        <h2>Loading...</h2>
-      ) : error ? (
-        <h2>{error}</h2>
-      ) : (
-        <>
-
-          <div className="container">
-            <CartHeader/>
-            <div className="row">
-              <div className="col-md-6">
-                <div className="left__image">
-                  <img src={product.itemImage} alt={product.itemName} />
+          <>
+              <Header/>
+                <div className="container">
+                  <br/>
+                    <div className="productsceen">
+                      {loading ? (
+                        <h2>Loading...</h2>
+                      ) : error ? (
+                        <h2>{error}</h2>
+                      ) : (
+                        <>
+                          <div className="container">
+                            <CartHeader/>
+                            <div className="row">
+                              <div className="col-md-6">
+                                <div className="left__image">
+                                  <img src={product.itemImage} alt={product.itemName} />
+                                </div>
+                              </div>
+                              <div className="col-md-6">
+                                <br/><br/><br/>
+                                <div className="left__info">
+                                  <p className="left__name">{product.itemName}</p>
+                                  <p className="left__name2">Description: {product.itemDescription}</p>
+                                  <p className="left__name2">Price: LKR:{product.itemAmount}</p>
+                                </div>
+                                <div className="productscreen__right">
+                                  <div className="right__info">
+                                    <div className="row">
+                                      <div className="col-md-6 ss">
+                                      <p>
+                                       Status: <h3 className="ava"> {product.itemQTY > 0 ? "In Stock" : "Out of Stock"}</h3>
+                                      </p>
+                                      </div>
+                                      <div className="col-md-6">
+                                        <p>
+                                           Qty
+                                           <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                                             {[...Array(product.itemQTY).keys()].map((x) => (
+                                                 <option key={x + 1} value={x + 1}>
+                                                   {x + 1}
+                                                 </option>
+                                             ))}
+                                           </select>
+                                          </p>
+                                      </div>
+                                    </div>
+                                    <p>
+                                      <button type="button" className="add" onClick={addToCartHandler}>
+                                        Add To Cart
+                                      </button>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      )}
+                    </div>
                 </div>
-              </div>
-              <div className="col-md-6">
-
-<br/><br/><br/>
-                <div className="left__info">
-                  <p className="left__name">{product.itemName}</p>
-                  <p className="left__name2">Description: {product.itemDescription}</p>
-                  <p className="left__name2">Price: LKR:{product.itemAmount}</p>
-
-                </div>
-                <div className="productscreen__right">
-                  <div className="right__info">
-                 <div className="row">
-                   <div className="col-md-6 ss">
-                     <p>
-                       Status: <h3 className="ava"> {product.itemQTY > 0 ? "In Stock" : "Out of Stock"}</h3>
-
-                     </p>
-                   </div>
-                   <div className="col-md-6">
-                     <p>
-                       Qty
-                       <select value={qty} onChange={(e) => setQty(e.target.value)}>
-                         {[...Array(product.itemQTY).keys()].map((x) => (
-                             <option key={x + 1} value={x + 1}>
-                               {x + 1}
-                             </option>
-                         ))}
-                       </select>
-                     </p>
-                   </div>
-                 </div>
-
-
-                    <p>
-                      <button type="button" className="add" onClick={addToCartHandler}>
-                        Add To Cart
-                      </button>
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+          <Footer/>
         </>
-      )}
-    </div>
-
-      </div>
-
-  <Footer/>
-</>
-
-      
   );
 };
 

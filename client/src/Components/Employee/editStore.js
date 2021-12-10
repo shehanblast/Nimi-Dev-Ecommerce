@@ -54,10 +54,7 @@ class EditStore extends Component {
     }
 
     componentDidMount() {
-        // this.state.paper_id = this.props.location.conProps.paperID;
-        //
-        // console.log(this.state.paper_id);
-
+     
         axios.get(`http://localhost:5001/store/${this.props.match.params.id}`)
             .then(response => {
                 this.setState(
@@ -113,136 +110,71 @@ class EditStore extends Component {
         return (
             <>
                 <Header/>
-            <div>
-                <Form className="store_wrapper" onSubmit={this.onSubmit}>
-                    <h2 className="store_title">EDIT STORE DETAILS</h2>
-                    <FormGroup>
-                        <label htmlFor="storeName" className="form-label">Name</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="storeName"
-                            name="itemName"
-                            placeholder="Name"
-                            value={this.state.itemName}
-                            onChange={this.onChange}
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <label htmlFor="storeDes" className="form-label">Description</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="storeDes"
-                            name="itemDescription"
-                            value={this.state.itemDescription}
-                            onChange={this.onChange}
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <label htmlFor="storeAmount" className="form-label">Amount</label>
-                        <input
-                            type="number"
-                            className="form-control"
-                            id="storeAmount"
-                            name="itemAmount"
-                            value={this.state.itemAmount}
-                            onChange={this.onChange}
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <label htmlFor="storeQTY" className="form-label">QTY</label>
-                        <input
-                            type="number"
-                            className="form-control"
-                            id="storeQTY"
-                            name="itemQTY"
-                            value={this.state.itemQTY}
-                            onChange={this.onChange}
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="storeImage">Image</Label>
-                        <br/>
-                        <FileBase type="file" multiple={false} onDone={({base64}) => this.state.itemImage = base64} />
-                    </FormGroup>
-                    &nbsp;
-                    {/*<button className="register_button btn btn-primary">REGISTER</button>*/}
-                    <button type="submit" className="store_button btn btn-primary">Edit Item</button><br/><br/>
-                    {/*<button className="store_button btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore(e)}>Items Page</button>*/}
-                </Form>
-                <button className="store_button2 btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore()}>
-                    <i className="fas fa-store"></i>  Items Page</button>
-
-            </div>
+                    <div>
+                        <Form className="store_wrapper" onSubmit={this.onSubmit}>
+                            <h2 className="store_title">EDIT STORE DETAILS</h2>
+                            <FormGroup>
+                                <label htmlFor="storeName" className="form-label">Name</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="storeName"
+                                    name="itemName"
+                                    placeholder="Name"
+                                    value={this.state.itemName}
+                                    onChange={this.onChange}
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <label htmlFor="storeDes" className="form-label">Description</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="storeDes"
+                                    name="itemDescription"
+                                    value={this.state.itemDescription}
+                                    onChange={this.onChange}
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <label htmlFor="storeAmount" className="form-label">Amount</label>
+                                <input
+                                    type="number"
+                                    className="form-control"
+                                    id="storeAmount"
+                                    name="itemAmount"
+                                    value={this.state.itemAmount}
+                                    onChange={this.onChange}
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <label htmlFor="storeQTY" className="form-label">QTY</label>
+                                <input
+                                    type="number"
+                                    className="form-control"
+                                    id="storeQTY"
+                                    name="itemQTY"
+                                    value={this.state.itemQTY}
+                                    onChange={this.onChange}
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="storeImage">Image</Label>
+                                <br/>
+                                <FileBase type="file" multiple={false} onDone={({base64}) => this.state.itemImage = base64} />
+                            </FormGroup>
+                            &nbsp;
+                            {/*<button className="register_button btn btn-primary">REGISTER</button>*/}
+                            <button type="submit" className="store_button btn btn-primary">Edit Item</button><br/><br/>
+                            {/*<button className="store_button btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore(e)}>Items Page</button>*/}
+                        </Form>
+                        <button className="store_button2 btn btn-success" disabled={this.state.isDisabled} onClick={(e) => this.navigateStore()}>
+                            <i className="fas fa-store"></i>  Items Page</button>
+        
+                    </div>
                 <Footer/>
             </>
         );
-
-        // return (
-        //     <div>
-        //         <div className="container">
-        //             <h1>Create Paper</h1>
-        //
-        //             <form onSubmit={this.onSubmit}>
-        //
-        //                 <div className="mb-3">
-        //                     <label htmlFor="storeName" className="form-label">Name</label>
-        //                     <input
-        //                         type="text"
-        //                         className="form-control"
-        //                         id="storeName"
-        //                         name="itemName"
-        //                         value={this.state.itemName}
-        //                         onChange={this.onChange}
-        //                     />
-        //                 </div>
-        //                 <div className="mb-3">
-        //                     <label htmlFor="storeDes" className="form-label">Description</label>
-        //                     <input
-        //                         type="text"
-        //                         className="form-control"
-        //                         id="storeDes"
-        //                         name="itemDescription"
-        //                         value={this.state.itemDescription}
-        //                         onChange={this.onChange}
-        //                     />
-        //                 </div>
-        //                 <div className="mb-3">
-        //                     <label htmlFor="storeAmount" className="form-label">Amount</label>
-        //                     <input
-        //                         type="number"
-        //                         className="form-control"
-        //                         id="storeAmount"
-        //                         name="itemAmount"
-        //                         value={this.state.itemAmount}
-        //                         onChange={this.onChange}
-        //                     />
-        //                 </div>
-        //                 <div className="mb-3">
-        //                     <label htmlFor="storeQTY" className="form-label">QTY</label>
-        //                     <input
-        //                         type="number"
-        //                         className="form-control"
-        //                         id="storeQTY"
-        //                         name="itemQTY"
-        //                         value={this.state.itemQTY}
-        //                         onChange={this.onChange}
-        //                     />
-        //                 </div>
-        //                 <div className="mb-3">
-        //                     <label htmlFor="itemImage" className="form-label">Picture</label>
-        //                     <div>
-        //                         <FileBase type="file" multiple={false} onDone={({base64}) => this.state.itemImage = base64} />
-        //                     </div>
-        //                 </div>
-        //
-        //                 <button type="submit" className="btn btn-primary">Add Item</button>
-        //             </form>
-        //         </div>
-        //         <br/>
-        //     </div>
-        // )
     }
 }
 export default EditStore;
