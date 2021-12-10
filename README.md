@@ -47,4 +47,4 @@ considered Spring boot - Backend.
  
  ## Contact
 
-Binuka Sihan Paranagama : https://www.linkedin.com/in/binuka-sihan-paranagama-636831194/
+Binuka Sihan Paranagama : https://shehanblast.github.io/Portfolio-0.3/
