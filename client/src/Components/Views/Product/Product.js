@@ -5,27 +5,6 @@ import React from "react";
 const Product = ({name,description,price,imageUrl,productId}) => {
 
   return (
-    // <div className="product">
-    //   <img src={imageUrl} alt={name} />
-    //
-    //   <div className="product__info">
-    //     <p className="info__name">{name}</p>
-    //
-    //
-    //     <p className="info__description">{description}</p>
-    //       {/*<p className="info__description">description</p>*/}
-    //
-    //
-    //       <p className="info__price">${price}</p>
-    //
-    //     <Link to={`/product/${productId}`} className="info__button">
-    //       View
-    //     </Link>
-    //
-    //   </div>
-    // </div>
-
-
 
       <div className="col-md-3">
 

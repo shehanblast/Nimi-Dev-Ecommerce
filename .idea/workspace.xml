@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Add reducers/actions for cart">
+    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Category Product Search function done.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Views/customerViewStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/customerViewStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Views/Product/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/Product/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +26,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/Components/Views/Product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/Components/Views/Cart" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -35,11 +36,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Components\Views\Cart" />
+      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Components\Views" />
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Components\Views\Product" />
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Components\Common" />
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Users" />
-      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src" />
-      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\src\controllers" />
@@ -72,7 +73,7 @@
       <updated>1638861105880</updated>
       <workItem from="1638861108808" duration="4017000" />
       <workItem from="1638868925835" duration="113000" />
-      <workItem from="1638869406091" duration="30899000" />
+      <workItem from="1638869406091" duration="32163000" />
     </task>
     <task id="LOCAL-00001" summary="Create Project structure">
       <created>1638862731576</created>
@@ -165,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639114969270</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Category Product Search function done.">
+      <created>1639117726136</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1639117726136</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +205,7 @@
     <MESSAGE value="Add Header" />
     <MESSAGE value="Email function added for the Account validation." />
     <MESSAGE value="Add reducers/actions for cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add reducers/actions for cart" />
+    <MESSAGE value="Category Product Search function done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Category Product Search function done." />
   </component>
 </project>
