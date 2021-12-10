@@ -30,7 +30,10 @@ class CustomerViewStore extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            store: []
+            store: [],
+            search:'',
+            filter:'',
+            filteredData:''
         }
 
     }
@@ -49,8 +52,19 @@ class CustomerViewStore extends Component {
         console.log(Id);
     }
 
+    handleChange = event => {
+        this.setState({ filter: event.target.value });
+    };
+
 
     render() {
+        const { filter, store } = this.state;
+        const lowerCasedFilter = filter.toLowerCase();
+        this.state.filteredData = store.filter(store => {
+            return Object.keys(store).some(key =>
+                typeof store[key] === "string" && store[key].toLowerCase().includes(lowerCasedFilter)
+            );
+        });
         return (
             <>
                 <Header/>
@@ -63,10 +77,12 @@ class CustomerViewStore extends Component {
                         <h2>Store</h2>
                     </div>
 
-                    <br/><br/>
+                    <form className="form-inline">
+                        <input className="form-control mr-sm-2 mr-md-2 " type="search" placeholder="Enter Category" aria-label="Search" value={filter} onChange={this.handleChange}/>
+                    </form>
 
                     <div className="row">
-                        {this.state.store.length > 0 && this.state.store.map((item, index) => (
+                        {this.state.store.length > 0 && this.state.filteredData.map((item, index) => (
                             <div className="col-md-3">
 
                                 <div className="card">
