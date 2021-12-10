@@ -2,10 +2,16 @@ import React, { useState} from 'react';
 import { LoadUserOther, LoginUser} from "../../Actions/Authentication";
 import {connect} from 'react-redux';
 import swat from "sweetalert2";
-import './login.css'
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+
+//Validation
 import {isEmail, isEmpty, isLength} from "../../Utils/validations";
+
+//Css
+import './login.css'
+
+//Common
 import Footer from "../../Components/Common/footer/footer";
 import Header from "../../Components/Common/Header/header"
 

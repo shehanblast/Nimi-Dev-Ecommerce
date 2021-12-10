@@ -1,15 +1,17 @@
-import "./ProductScreen.css";
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // Actions
-import { getProductDetails } from "../redux/actions/productActions";
-import { addToCart } from "../redux/actions/cartActions";
+import { getProductDetails } from "../../../redux/actions/productActions";
+import { addToCart } from "../../../redux/actions/cartActions";
 
-
+//Common
 import Footer from "../../Common/footer/footer";
 import Header from "../../Common/Header/header";
-import CartHeader from "../Cart/cartHeader"
+import CartHeader from "../Cart/cartHeader";
+
+//Css
+import "./ProductScreen.css";
 
 const ProductScreen = ({ match, history }) => {
   const [qty, setQty] = useState(1);

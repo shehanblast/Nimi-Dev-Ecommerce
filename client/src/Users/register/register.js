@@ -3,11 +3,17 @@ import swat from "sweetalert2";
 import axios from "axios";
 import {Form, FormGroup, Label, Input, FormFeedback} from 'reactstrap';
 import {SERVER_ADDRESS} from "../../Constants/Constants";
-import './register.css'
 import zxcvbn from "zxcvbn";
+
+//validation
 import {isLengthMobile, isMobile} from "../../Utils/validations";
+
+//Common
 import Footer from "../../Components/Common/footer/footer";
-import Header from "../../Components/Common/Header/header"
+import Header from "../../Components/Common/Header/header";
+
+//Css
+import './register.css'
 
 const RegisteredAlert = () => {
     swat.fire({

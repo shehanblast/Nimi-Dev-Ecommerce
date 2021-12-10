@@ -2,8 +2,12 @@ import React, { Component} from 'react';
 import axios from 'axios';
 import swat from "sweetalert2"
 import {Form, FormGroup, Label, Input, FormFeedback} from 'reactstrap';
-import '../../Employee/createStore.css'
 import {Link} from "react-router-dom";
+
+//Css
+import '../../Employee/createStore.css'
+
+//Common
 import Footer from "../../Common/footer/footer";
 import Header from "../../Common/Header/header";
 

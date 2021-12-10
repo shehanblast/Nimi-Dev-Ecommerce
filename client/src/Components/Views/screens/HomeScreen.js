@@ -1,15 +1,19 @@
-import "./HomeScreen.css";
 import React, { useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
 
 // Components
-import Product from "../components/Product";
+import Product from "../../Views/Product/Product";
 
 //Actions
-import { getProducts as listProducts } from "../redux/actions/productActions";
+import { getProducts as listProducts } from "../../../redux/actions/productActions";
+
+//Common
 import Footer from "../../Common/footer/footer";
 import Header from "../../Common/Header/header";
-import CartHeader from "../Cart/cartHeader"
+import CartHeader from "../Cart/cartHeader";
+
+//Css
+import "./HomeScreen.css";
 
 const HomeScreen = () => {
     const dispatch = useDispatch();

@@ -1,12 +1,13 @@
 import React, { Component} from 'react';
 import axios from 'axios';
-// import ReviewerNavBar from "../navbar/reviewerNavBar";
 import swat from "sweetalert2";
 import jsPDF from "jspdf";
 import {DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "reactstrap";
 import { ExportToCsv } from 'export-to-csv';
 // import * as jsPDF from "jspdf";
 import 'jspdf-autotable'
+
+//Common
 import Footer from "../Common/footer/footer"
 import Header from "../Common/Header/header"
 

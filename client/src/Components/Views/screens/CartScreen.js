@@ -1,18 +1,21 @@
-import "./CartScreen.css";
 import React, {useEffect, useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 //Components
-import CartItem from "../components/CartItem";
+import CartItem from "../Cart/CartItem";
+import CartPayment from "../../Views/Cart/cartPayment";
 
 //Actions
-import { addToCart, removeFromCart } from "../redux/actions/cartActions";
-import CartPayment from "../components/forms/cartPayment";
+import { addToCart, removeFromCart } from "../../../redux/actions/cartActions";
 
+//Common
 import Footer from "../../Common/footer/footer";
 import Header from "../../Common/Header/header";
-import CartHeader from "../Cart/cartHeader"
+import CartHeader from "../Cart/cartHeader";
+
+//Css
+import "./CartScreen.css";
 
 const CartScreen = () => {
   const dispatch = useDispatch();

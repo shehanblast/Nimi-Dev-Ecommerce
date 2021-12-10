@@ -2,12 +2,15 @@ import React, { Component} from 'react';
 import axios from 'axios';
 import swat from "sweetalert2"
 import {Form, FormGroup, Label, Input, FormFeedback} from 'reactstrap';
-import './createStore.css'
 import FileBase from 'react-file-base64';
 import {Link} from "react-router-dom";
+
+//Css
+import './createStore.css'
+
+//Common
 import Footer from "../Common/footer/footer"
 import Header from "../Common/Header/header"
-
 
 
 const initialState = {
