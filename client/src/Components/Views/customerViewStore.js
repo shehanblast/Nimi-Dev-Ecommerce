@@ -3,6 +3,7 @@ import axios from 'axios';
 import swat from "sweetalert2";
 import Footer from "../Common/footer/footer"
 import Header from "../Common/Header/header"
+// import Product from "../Views/Product/Product"
 
 const SubmissionAlert1 = () => {
     swat.fire({
@@ -87,12 +88,13 @@ class CustomerViewStore extends Component {
 
                 </div>
             </div>
+
         <Footer/>
     </>
-
         )
     }
 }
 
 export default CustomerViewStore;
+
 

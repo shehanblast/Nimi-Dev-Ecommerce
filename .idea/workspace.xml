@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Add Header">
+    <list default="true" id="5fb0b6d4-677a-4a2b-a5d8-71ece908f00a" name="Changes" comment="Email function added for the Account validation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Common/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Common/Header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Views/customerViewStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/customerViewStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Views/empViewStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Views/empViewStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Users/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Users/login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Users/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Users/register/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/SendEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SendEmail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="K:/Bakup SPM project 1/n1/SPM_PROJECT" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/Components/Views/Product" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -41,11 +37,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Components\Views\Product" />
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Components\Common" />
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src\Users" />
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client\src" />
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\client" />
-      <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\shiha\Desktop\nimiDev\nimi\src\controllers" />
@@ -78,7 +74,7 @@
       <updated>1638861105880</updated>
       <workItem from="1638861108808" duration="4017000" />
       <workItem from="1638868925835" duration="113000" />
-      <workItem from="1638869406091" duration="24644000" />
+      <workItem from="1638869406091" duration="29281000" />
     </task>
     <task id="LOCAL-00001" summary="Create Project structure">
       <created>1638862731576</created>
@@ -157,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639029825120</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Email function added for the Account validation.">
+      <created>1639060453611</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1639060453611</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +190,7 @@
     <MESSAGE value="Login/Register done." />
     <MESSAGE value="Add Footer" />
     <MESSAGE value="Add Header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Header" />
+    <MESSAGE value="Email function added for the Account validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Email function added for the Account validation." />
   </component>
 </project>
